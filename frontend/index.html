@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Voting System</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Blockchain Voting System (Sepolia)</h1>
+      <p class="subtitle">Connect MetaMask and cast one on-chain vote.</p>
+
+      <section class="card">
+        <button id="connectButton">Connect Wallet</button>
+        <p id="walletAddress">Not connected</p>
+      </section>
+
+      <section class="card">
+        <h2>Candidates</h2>
+        <div id="candidatesList" class="list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Vote</h2>
+        <label for="candidateIndex">Candidate Index</label>
+        <input id="candidateIndex" type="number" min="0" placeholder="0" />
+        <button id="voteButton">Cast Vote</button>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
